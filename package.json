@@ -4,7 +4,7 @@
   "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
     "start": "node src/server.js"
   },
   "dependencies": {
@@ -17,3 +17,4 @@
     "nodemon": "^2.0.22"
   }
 }
+
