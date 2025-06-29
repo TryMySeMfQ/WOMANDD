@@ -4,7 +4,7 @@ import cors from 'cors';
 import 'dotenv/config'; // isso carrega as variáveis do .env
 import banco from './data.js';
 import delegaciasRoutes from './routes/delegaciasRoutes.js';
-import contatoRoutes from './routes/contatosRoutes.js';
+import contatosRoutes from './routes/contatosRoutes.js';
 import dicasRoutes from './routes/dicasRoutes.js';
 
 const app = express();
@@ -14,7 +14,7 @@ app.use(cors());
 
 // Rotas principais
 app.use('/delegacias', delegaciasRoutes);
-app.use('/contatos', contatoRoutes);
+app.use('/contatos', contatosRoutes);
 app.use('/dicas', dicasRoutes);
 
 // Endpoints da API
