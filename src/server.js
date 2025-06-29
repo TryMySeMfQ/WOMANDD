@@ -4,7 +4,7 @@ import cors from 'cors';
 import 'dotenv/config'; // isso carrega as variáveis do .env
 import banco from './data.js';
 import delegaciasRoutes from './routes/delegaciasRoutes.js';
-import ajudaRoutes from './routes/ajudaRoutes.js';
+import contatoRoutes from './routes/contatosRoutes.js';
 import dicasRoutes from './routes/dicasRoutes.js';
 
 const app = express();
@@ -14,12 +14,12 @@ app.use(cors());
 
 // Rotas principais
 app.use('/delegacias', delegaciasRoutes);
-app.use('/ajuda', ajudaRoutes);
+app.use('/contatos', contatoRoutes);
 app.use('/dicas', dicasRoutes);
 
 // Endpoints da API
 app.get("/api/delegacias", (req, res) => res.json(banco.delegacias));
-app.get("/api/ajuda", (req, res) => res.json(banco.telefones));
+app.get("/api/contatos", (req, res) => res.json(banco.telefones));
 app.get("/api/dicas", (req, res) => res.json(banco.dicas));
 
 // Raiz
